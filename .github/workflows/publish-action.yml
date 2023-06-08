@@ -23,13 +23,9 @@ jobs:
                 scope: '@dusantrickovic'
             
             - name: Install dependencies
-              run: npm ci
-
-            - name: Set GHR
-              uses: actions/setup-node@v3
-              with:
-                registry-url: 'https://npm.pkg.github.com'
-                scope: '@dusantrickovic'
+              run: |
+                npm ci
+                npm config set registry https://npm.pkg.github.com
 
             - name: Publish to GHR
               run: npm publish
