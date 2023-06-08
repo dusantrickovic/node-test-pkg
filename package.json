@@ -1,0 +1,19 @@
+{
+  "name": "node-test-pkg",
+  "version": "1.0.0",
+  "description": "A sample package to test out registries",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dusantrickovic/node-test-pkg.git"
+  },
+  "author": "Dusan Trickovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dusantrickovic/node-test-pkg/issues"
+  },
+  "homepage": "https://github.com/dusantrickovic/node-test-pkg#readme"
+}
