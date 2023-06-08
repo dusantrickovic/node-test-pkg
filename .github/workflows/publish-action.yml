@@ -27,8 +27,6 @@ jobs:
               run: |
                 npm ci
                 npm config set registry https://npm.pkg.github.com
-                echo "//npm.pkg.github.com/:_authToken=${{github.token}}" >> .npmrc
-                cat .npmrc
 
             - name: Publish to GHR
               run: npm publish --userconfig ./.npmrc
