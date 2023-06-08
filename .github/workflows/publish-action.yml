@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
 
         permissions:
-            contents: write
+            contents: read
             packages: write
             pull-requests: write
 
@@ -27,6 +27,7 @@ jobs:
               uses: actions/setup-node@v3
               with:
                 registry-url: 'https://npm.pkg.github.com'
+                scope: '@dusantrickovic'
 
             - name: Publish to GHR
               run: npm publish
@@ -38,6 +39,7 @@ jobs:
               with:
                 node-version: 18.x
                 registry-url: 'https://registry.npmjs.org'
+                scope: '@dusantrickovic'
 
             - name: Publish to NPM registry
               run: npm publish
