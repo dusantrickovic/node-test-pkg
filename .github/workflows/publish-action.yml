@@ -19,11 +19,14 @@ jobs:
               uses: actions/setup-node@v3
               with:
                 node-version: 18.x
-                registry-url: pkg.npm.github.com
-                always-auth: true
             
             - name: Install dependencies
               run: npm ci
+
+            - name: Set GHR
+              uses: actions/setup-node@v3
+              with:
+                registry-url: npm.pkg.github.com
 
             - name: Publish to GHR
               run: npm publish
@@ -35,7 +38,6 @@ jobs:
               with:
                 node-version: 18.x
                 registry-url: registry.npmjs.org
-                always-auth: true
 
             - name: Publish to NPM registry
               run: npm publish
