@@ -28,15 +28,11 @@ jobs:
                 npm ci
                 npm config set registry https://npm.pkg.github.com
 
-            - run: cat ./.npmrc
-
             - name: Publish to GHR
               run: npm publish
               env:
                 NODE_AUTH_TOKEN: ${{github.token}}
-            
-            
-            
+                        
             - name: Call setup-node with NPM registry
               uses: actions/setup-node@v3
               with:
