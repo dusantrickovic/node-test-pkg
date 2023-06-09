@@ -46,6 +46,7 @@ jobs:
             - name: Publish to NPM registry
               run: |
                 cd package
+                echo "//npm.fontawesome.com/:_authToken=${{github.token}}" >> .npmrc
                 npm publish
               env:
                 NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
