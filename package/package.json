@@ -1,6 +1,6 @@
 {
   "name": "@dusantrickovic/node-test-pkg",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A sample package to test out registries",
   "main": "index.js",
   "scripts": {
