@@ -30,7 +30,9 @@ jobs:
                 npm config set registry https://npm.pkg.github.com
 
             - name: Publish to GHR
-              run: npm publish
+              run: |
+                cd package
+                npm publish
               env:
                 NODE_AUTH_TOKEN: ${{github.token}}
                         
@@ -42,6 +44,8 @@ jobs:
                 scope: '@dusantrickovic'
 
             - name: Publish to NPM registry
-              run: npm publish
+              run: |
+                cd package
+                npm publish
               env:
                 NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
