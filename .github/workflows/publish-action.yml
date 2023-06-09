@@ -39,6 +39,7 @@ jobs:
               with:
                 node-version: 18.x
                 registry-url: 'https://registry.npmjs.org'
+                scope: '@dusantrickovic'
 
             - name: Publish to NPM registry
             ## Use the 'echo' step if only setting the scopes isn't working
