@@ -25,6 +25,7 @@ jobs:
             
             - name: Install dependencies
               run: |
+                cd package
                 npm ci
                 npm config set registry https://npm.pkg.github.com
 
