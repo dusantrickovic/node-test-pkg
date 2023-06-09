@@ -30,7 +30,6 @@ jobs:
             - name: Publish to GHR
               run: |
                 cd package
-                echo "//npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}" >> .npmrc
                 npm publish
               env:
                 NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -45,7 +44,6 @@ jobs:
             - name: Publish to NPM registry
               run: |
                 cd package
-                echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" >> .npmrc
                 npm publish --access public
               env:
                 NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
