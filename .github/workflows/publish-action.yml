@@ -20,7 +20,6 @@ jobs:
               with:
                 node-version: 18.x
                 registry-url: 'https://npm.pkg.github.com'
-                scope: '@dusantrickovic'
             
             - name: Install dependencies
               run: |
@@ -39,7 +38,6 @@ jobs:
               with:
                 node-version: 18.x
                 registry-url: 'https://registry.npmjs.org'
-                scope: '@dusantrickovic'
 
             - name: Publish to NPM registry
               run: |
