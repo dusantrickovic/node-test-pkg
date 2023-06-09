@@ -17,6 +17,5 @@
   },
   "homepage": "https://github.com/dusantrickovic/node-test-pkg#readme",
   "dependencies": {
-    "jest": "^29.5.0"
   }
 }
