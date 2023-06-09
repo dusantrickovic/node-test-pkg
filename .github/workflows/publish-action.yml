@@ -20,7 +20,6 @@ jobs:
               with:
                 node-version: 18.x
                 registry-url: 'https://npm.pkg.github.com'
-                scope: '@dusantrickovic' ## LITERALLY JUST PUT THE SCOPES OH MY GOD THIS TOOK A WHILE
             
             - name: Install dependencies
               run: |
@@ -31,7 +30,6 @@ jobs:
             ## Use the 'echo' step if only setting the scopes isn't working
               run: |
                 cd package
-                echo "//npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}" >> .npmrc
                 npm publish
               env:
                 NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
