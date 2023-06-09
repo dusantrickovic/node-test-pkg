@@ -20,6 +20,7 @@ jobs:
               with:
                 node-version: 18.x
                 registry-url: 'https://npm.pkg.github.com'
+                scope: '@dusantrickovic' ## LITERALLY JUST PUT THE SCOPES OH MY GOD THIS TOOK A WHILE
             
             - name: Install dependencies
               run: |
@@ -27,8 +28,10 @@ jobs:
                 npm ci
 
             - name: Publish to GHR
+            ## Use the 'echo' step if only setting the scopes isn't working
               run: |
                 cd package
+                
                 npm publish
               env:
                 NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -38,10 +41,13 @@ jobs:
               with:
                 node-version: 18.x
                 registry-url: 'https://registry.npmjs.org'
+                scope: '@dusantrickovic' ## LITERALLY JUST PUT THE SCOPES OH MY GOD THIS TOOK A WHILE
 
             - name: Publish to NPM registry
+            ## Use the 'echo' step if only setting the scopes isn't working
               run: |
                 cd package
+                
                 npm publish --access public
               env:
                 NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
